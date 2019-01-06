@@ -1,6 +1,11 @@
 require('dotenv').config();
 const Discord = require('discord.js');
+const Datastore = require('nedb');
 const whoIsHome = require('./functions/whoIsHome');
+const initializeUsers = require('./functions/initializeUsers');
+
+const users = new Datastore({ filename: 'data/users.db', autoload: true });
+initializeUsers(users);
 
 const client = new Discord.Client();
 

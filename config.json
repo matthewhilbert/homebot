@@ -1,23 +1,28 @@
 {
   "users": [
     {
-      "displayName": "Alexandra",
+      "id": "alexandra",
+      "name": "Alexandra",
       "hassEntityId": "device_tracker.alexandras_iphone8"
     },
     {
-      "displayName": "Andrew",
+      "id": "andrew",
+      "name": "Andrew",
       "hassEntityId": "device_tracker.andrews_oneplus6"
     },
     {
-      "displayName": "Irisa",
+      "id": "irisa",
+      "name": "Irisa",
       "hassEntityId": "device_tracker.irisas_android"
     },
     {
-      "displayName": "Kim",
+      "id": "kim",
+      "name": "Kim",
       "hassEntityId": "device_tracker.kim_iphone6s"
     },
     {
-      "displayName": "Matt",
+      "id": "matt",
+      "name": "Matt",
       "hassEntityId": "device_tracker.matts_iphone8"
     }
   ]

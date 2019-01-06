@@ -17,7 +17,7 @@ async function whoIsHome() {
   const hassUserStates = hassStates.filter(state => hassEntityIds.includes(state.entity_id));
   const usersAtHomeEntityIds = hassUserStates.filter(s => s.state === 'home').map(s => s.entity_id);
 
-  const usersAtHome = usersAtHomeEntityIds.map(id => find(config.users, { hassEntityId: id }).displayName);
+  const usersAtHome = usersAtHomeEntityIds.map(id => find(config.users, { hassEntityId: id }).name);
   return usersAtHome;
 }
 
