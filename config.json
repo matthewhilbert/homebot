@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "displayName": "Alexandra",
+      "hassEntityId": "device_tracker.alexandras_iphone8"
+    },
+    {
+      "displayName": "Andrew",
+      "hassEntityId": "device_tracker.andrews_oneplus6"
+    },
+    {
+      "displayName": "Irisa",
+      "hassEntityId": "device_tracker.irisas_android"
+    },
+    {
+      "displayName": "Kim",
+      "hassEntityId": "device_tracker.kim_iphone6s"
+    },
+    {
+      "displayName": "Matt",
+      "hassEntityId": "device_tracker.matts_iphone8"
+    }
+  ]
+}

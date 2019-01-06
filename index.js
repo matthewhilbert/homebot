@@ -1,18 +1,17 @@
 require('dotenv').config();
 const Discord = require('discord.js');
+const whoIsHome = require('./functions/whoIsHome');
 
 const client = new Discord.Client();
 
-client.on('ready', () => {
+client.on('ready', async () => {
   console.log('I am ready!');
 });
 
-client.on('message', message => {
+client.on('message', async message => {
   if (message.author.bot) return; // Ignore bot messages
-  const args = message.content.split(/ +/g);
-  const command = args.shift().toLowerCase();
 
-  if (command === 'ping') {
+  if (message.content === 'ping') {
     message.channel.send('pong...').then(msg => {
       msg.edit(
         `pong! Latency is ${msg.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(
@@ -20,6 +19,11 @@ client.on('message', message => {
         )}`
       );
     });
+  }
+
+  if (message.content === 'who is home') {
+    const usersAtHome = await whoIsHome();
+    message.channel.send(usersAtHome.join(', '));
   }
 });
 
