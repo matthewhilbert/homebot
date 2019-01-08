@@ -28,9 +28,18 @@ client.on('message', async message => {
     });
   }
 
-  if (message.content === 'who is home') {
+  if (message.content.toLowerCase().startsWith('who is home')) {
     const usersAtHome = await whoIsHome();
-    message.channel.send(usersAtHome.join(', '));
+    message.channel.send(usersAtHome.map(u => u.name).join(', '));
+  }
+
+  if (message.content.toLowerCase().startsWith('summon')) {
+    const usersAtHome = await whoIsHome();
+    usersAtHome.forEach(user => {
+      if (user.discordUserId) {
+        client.users.get(user.discordUserId).send("C'mon down!");
+      }
+    });
   }
 });
 

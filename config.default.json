@@ -1,0 +1,27 @@
+{
+  "timeZone": "America/New_York",
+  "userAtHomeEvents": [
+    {
+      "description": "Saturday and Sunday at 2pm",
+      "schedule": "00 00 14 * * 0,6",
+      "update": {
+        "consumed": 1
+      }
+    },
+    {
+      "description": "Every day at 8pm",
+      "schedule": "00 00 20 * * *",
+      "update": {
+        "consumed": 1
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": "matt",
+      "name": "Matt",
+      "hassEntityId": "device_tracker.matts_phone",
+      "discordUserId": "12345678"
+    }
+  ]
+}
